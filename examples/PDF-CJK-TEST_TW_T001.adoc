@@ -1,0 +1,111 @@
+= AsciidocFX PDF CJK 測試 - 李白詩詞
+life888888
+:doctype: article
+//:doctype: book
+:encoding: utf-8
+:lang: zh-tw
+:toc: left
+:numbered:
+:author: 李白
+:subject: AsciidocFX PDF CJK 測試1 - 測試中文內容轉PDF
+:keywords: Asciidoctor,AsciidocFX,CJK,PDF,Asciidoctor-PDF
+:revnumber: 0.0.1
+:revdate: 2022-10-03
+//:pdf-theme: {docdir}/theme/custom-default-notosans-cjk-tc-theme.yml
+//:pdf-theme: {docdir}/theme/custom-notosans-cjk-tc-theme.yml
+//:pdf-theme: uri:classloader:/data/themes/default-ext-notosans-cjk-tc-theme.yml
+//:pdf-theme: uri:classloader:/data/themes/default-ext-notosansmono-cjk-tc-theme.yml
+//:pdf-theme: uri:classloader:/data/themes/default-ext-notoserif-cjk-tc-theme.yml
+//:pdf-theme: default-ext-notoserif-cjk-tc
+//:pdf-theme: default-ext-notosans-cjk-tc
+//:pdf-theme: default-ext-notosansmono-cjk-tc
+//:pdf-theme: default-notoserif-cjk-tc
+//:pdf-theme: default-notosans-cjk-tc
+//:pdf-theme: default-notosansmono-cjk-tc
+//:pdf-theme: notoserif-cjk-tc
+//:pdf-theme: notosans-cjk-tc
+//:pdf-theme: notosansmono-cjk-tc
+
+
+ifdef::backend-pdf[]
+
+* 輸出為 {backend}
+
+* 套用樣式設定 **{pdf-theme}**
+
+* pdf-themesdir: **{pdf-themesdir}**
+
+* pdf-fontsdir: **{pdf-fontsdir}**
+
+endif::[]
+
+== 李白
+
+=== 將進酒
+
+君不見，黃河之水天上來，奔流到海不復回。
+
+君不見，高堂明鏡悲白髮，朝如青絲暮成雪。
+
+人生得意須盡歡，莫使金樽空對月。
+
+天生我材必有用，千金散盡還復來。
+
+烹羊宰牛且為樂，會須一飲三百杯。
+
+岑夫子，丹丘生，將進酒，杯莫停。
+
+與君歌一曲，請君為我傾耳聽。
+
+鐘鼓饌玉不足貴，但願長醉不復醒。
+
+古來聖賢皆寂寞，惟有飲者留其名。
+
+陳王昔時宴平樂，斗酒十千恣歡謔。
+
+主人何為言少錢，徑須沽取對君酌。
+
+五花馬，千金裘，呼兒將出換美酒，與爾同銷萬古愁。
+
+=== 宣州謝脁樓餞別校書叔雲
+
+棄我去者，昨日之日不可留；
+
+亂我心者，今日之日多煩憂。
+
+長風萬里送秋雁，對此可以酣高樓。
+
+蓬萊文章建安骨，中間小謝又清發。
+
+俱懷逸興壯思飛，欲上青天覽明月。
+
+抽刀斷水水更流，舉杯銷愁愁更愁。
+
+人生在世不稱意，明朝散發弄扁舟。
+
+
+
+=== 清平調
+
+雲想衣裳花想容，春風拂檻露華濃。
+
+若非群玉山頭見，會向瑤台月下逢。
+
+
+=== 月下獨酌
+
+花間一壺酒，獨酌無相親。
+
+舉杯邀明月，對影成三人。
+
+月既不解飲，影徒隨我身。
+
+暫伴月將影，行樂須及春。
+
+我歌月徘徊，我舞影零亂。
+
+醒時同交歡，醉後各分散。
+
+永結無情游，相期邈雲漢。
+
+
