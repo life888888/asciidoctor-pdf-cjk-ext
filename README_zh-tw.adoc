@@ -1,0 +1,836 @@
+= asciidoctor-pdf-cjk-ext
+:experimental:
+ifdef::env-github[]
+:toc:
+:toc-placement: preamble
+endif::[]
+ifndef::env-github[]
+:toc:
+:toc-placement: left
+endif::[]
+:imagesdir: images
+:font_lang: tc
+:asciidoctor-pdf-cjk-ext-version: 0.1.0
+:url-project-repo: https://github.com/life888888/asciidoctor-pdf-cjk-ext
+:download-root: https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v{asciidoctor-pdf-cjk-ext-version}
+life888888
+
+Asciidoctor PDF CJK Ext 是用來提供 Asciidoctor / AsciidoctorJ / AsciidocFX / Maven / Gradle 產生包含 CJK languages (Chinese, Japanese, Korean) 的 PDF 時所需要的 theme 跟 ttf 檔案。
+
+== Overview
+
+Asciidoctor PDF CJK Ext 是用來提供 Asciidoctor / AsciidoctorJ / AsciidocFX / Maven / Gradle 產生包含 CJK languages (Chinese, Japanese, Korean) 的 PDF 時所需要的 theme 跟 ttf 檔案。
+
+* Theme 支援 Asciidoctor PDF 1.x 跟  Asciidoctor PDF 2.x。
+
+* Font 包含 Noto Sans CJK, Noto Sans Mono CJK, Noto Serif CJK。
+
+* 每種 Font 的 包含 4 種 Style: Regular, Bold, Italic, BoldItalic。(Italic, BoldItalic 是透過 Fontforge 產生)
+
+提供兩種使用方式: jar 檔案跟目錄方式。
+
+
+== Download Themes And Fonts Package
+
+如果你是使用 AsciidoctorJ, AsciidocFX, Maven 建議優先使用 Jar 的方式。
+
+如果你是使用 Asciidoctor, Gradle 建議優先使用 下載Zip 的方式。
+
+
+[cols="1,1,1"]
+|===
+|Runtimes | Jar Format | Zip Format
+
+|AsciidoctorJ
+|✅ <<jar-format>>
+|✅ <<zip-format>>
+
+|AsciidocFX
+|✅ <<jar-format>>
+|✅ <<zip-format>>
+
+|Asciidoctor
+|❌
+|✅ <<zip-format>>
+
+|Maven
+|✅ <<jar-format>>
+|✅ <<zip-format>>
+
+|Gradle
+|❌
+|✅ <<zip-format>>
+
+|=== 
+
+[#jar-format,reftext=Jar Format]
+=== Jar Format
+
+請根據你要使用的字型與語言選擇其中一個下載。
+
+[cols="1,1,1,1"]
+|===
+| Language / Fonts | Sans | Sans Mono | serif
+
+|SC (Simplified Chinese)
+|{download-root}/pdf-ext-notosans-cjk-sc.jar[pdf-ext-notosans-cjk-sc.jar]
+|{download-root}/pdf-ext-notosansmono-cjk-sc.jar[pdf-ext-notosansmono-cjk-sc.jar] 
+|{download-root}/pdf-ext-notoserif-cjk-sc.jar[pdf-ext-notoserif-cjk-sc.jar]
+
+
+|TC (Traditional Chinese)
+|{download-root}/pdf-ext-notosans-cjk-tc.jar[pdf-ext-notosans-cjk-tc.jar]
+|{download-root}/pdf-ext-notosansmono-cjk-tc.jar[pdf-ext-notosansmono-cjk-tc.jar]
+|{download-root}/pdf-ext-notoserif-cjk-tc.jar[pdf-ext-notoserif-cjk-tc.jar]
+
+|HK (Hong Kong)
+|{download-root}/pdf-ext-notosans-cjk-hk.jar[pdf-ext-notosans-cjk-hk.jar]
+|{download-root}/pdf-ext-notosansmono-cjk-hk.jar[pdf-ext-notosansmono-cjk-hk.jar] 
+|{download-root}/pdf-ext-notoserif-cjk-hk.jar[pdf-ext-notoserif-cjk-hk.jar]
+
+
+|JP (Japanese)
+|{download-root}/pdf-ext-notosans-cjk-jp.jar[pdf-ext-notosans-cjk-jp.jar]
+|{download-root}/pdf-ext-notosansmono-cjk-jp.jar[pdf-ext-notosansmono-cjk-jp.jar]
+|{download-root}/pdf-ext-notoserif-cjk-jp.jar[pdf-ext-notoserif-cjk-jp.jar]
+
+|KR (Korean)
+|{download-root}/pdf-ext-notosans-cjk-kr.jar[pdf-ext-notosans-cjk-kr.jar]
+|{download-root}/pdf-ext-notosansmono-cjk-kr.jar[pdf-ext-notosansmono-cjk-kr.jar]
+|{download-root}/pdf-ext-notoserif-cjk-kr.jar[pdf-ext-notoserif-cjk-kr.jar]
+
+|=== 
+
+
+[#zip-format,reftext=Zip Format]
+=== Zip Format
+
+請根據你要使用的字型與語言選擇其中一個下載。
+
+[cols="1,1,1,1"]
+|===
+| Language / Fonts | Sans | Sans Mono | serif
+
+|SC (Simplified Chinese)
+|{download-root}/notosans-cjk-sc.zip[notosans-cjk-sc.zip]
+|{download-root}/notosansmono-cjk-sc.zip[notosansmono-cjk-sc.zip] 
+|{download-root}/notoserif-cjk-sc.zip[notoserif-cjk-sc.zip]
+
+
+|TC (Traditional Chinese)
+|{download-root}/notosans-cjk-tc.zip[notosans-cjk-tc.zip]
+|{download-root}/notosansmono-cjk-tc.zip[notosansmono-cjk-tc.zip]
+|{download-root}/notoserif-cjk-tc.zip[notoserif-cjk-tc.zip]
+
+|HK (Hong Kong)
+|{download-root}/notosans-cjk-hk.zip[notosans-cjk-hk.zip]
+|{download-root}/notosansmono-cjk-hk.zip[notosansmono-cjk-hk.zip] 
+|{download-root}/notoserif-cjk-hk.zip[notoserif-cjk-hk.zip]
+
+
+|JP (Japanese)
+|{download-root}/notosans-cjk-jp.zip[notosans-cjk-jp.zip]
+|{download-root}/notosansmono-cjk-jp.zip[notosansmono-cjk-jp.zip]
+|{download-root}/notoserif-cjk-jp.zip[notoserif-cjk-jp.zip]
+
+|KR (Korean)
+|{download-root}/notosans-cjk-kr.zip[notosans-cjk-kr.zip]
+|{download-root}/notosansmono-cjk-kr.zip[notosansmono-cjk-kr.zip]
+|{download-root}/notoserif-cjk-kr.zip[notoserif-cjk-kr.zip]
+
+|=== 
+
+
+== Useage
+
+=== AsciidocFX
+
+[IMPORTANT] 
+.請先確認 AsciidocFX 的版本
+====
+從 AsciidocFX-1.7.6 開始才有支援 PDF Converter 為 ASCIIDOCTOR。
+====
+
+1. 請將下載的 jar 檔案放到 AsciidocFX/lib 目錄下。
+
+EX: pdf-ext-notosans-cjk-tc.jar, pdf-ext-notosansmono-cjk-tc.jar, pdf-ext-notoserif-cjk-tc.jar
+
+2. 修改 AsciidocFX 記憶體配置
+
+為何需要修改 AsciidocFX 記憶體配置?
+
+如果不修改，在套用中文 pdf 時可能會出現記憶體不足錯誤。然後不會產生 pdf。
+
+.AsciidocFX/log/asciidocfx.log
+[source,log]
+----
+java.lang.OutOfMemoryError: Java heap space
+----
+
+編輯 AsciidocFX/AsciidocFX.vmoptions , 找到 `-Xmx756M` 修改 `-Xmx1024M` 或是更多例如 `-Xmx1536M` 。然後存檔。
+
+.AsciidocFX/AsciidocFX.vmoptions
+[source,properties]
+----
+-Xmx1536M
+----
+
+3. 修改 AsciidocFX 的 ASCIIDOCTOR 的 PDF 設定
+你可以使用 GUI 方式修改或是編輯器方式修改。
+
+==== GUI 方式修改
+1. 執行 AsciidocFX
+
+image:asciidocfx-asciidoctor-pdf-setup.png[AsciidocFX PDF 設定]
+
+[IMPORTANT] 
+.確認 PDF Converter 目前是選定為 ASCIIDOCTOR
+====
+* 請先確認 PDF Converter 目前是選定為 ASCIIDOCTOR，如果 PDF Converter 目前是選定為 FOP，並不會看到上面的設定畫面。
+
+* AsciidocFX AsciidocFX-1.7.6 PDF Converter 預設是 ASCIIDOCTOR。
+
+* 如果你要使用的 PDF Converter 是 FOP，請離開本文件，因為本文件不支援 PDF Converter 是 FOP。
+====
+
+2. 點選 右邊側面選單 Settings ①
+
+3. 點選 右邊上方選單 PDF Settings ②
+
+4. 點選 Add 按鈕 ③
+
+5. 依照下方表格輸入對應 attribute 跟 value 內容 ④
+
+[cols="1,1"]
+|===
+|attribute | value
+
+|pdf-fontsdir
+|uri:classloader:/data/fonts;GEM_FONTS_DIR;
+
+|pdf-themesdir
+|uri:classloader:/data/themes
+
+|pdf-theme
+|default-ext-notosans-cjk-tc
+
+|=== 
+
+
+pdf-theme: 每種對應的字型有 3 種套表樣式 , 對應語言, 例如你的語言是 tc
+(a) 選擇 Font (sans, sansmono, serif), 假設你要使用 Noto Sans CJK
+(b) 選擇 對應的 theme (default-ext-notosans-cjk-tc , default-notosans-cjk-tc , notosans-cjk-tc)
+
+
+6. 完成後點選 Save  按鈕 ⑤
+
+儲存完成後 , AsciidocFX 預設就會使用你設定的 theme 來對 PDF 進行套表。
+
+==== 編輯器方式修改
+
+
+1. (假如你使用的是 AsciidocFX 1.7.8) , 
+
+* 如果你已經啟動過 AsciidocFX , 開啟你的 home 目錄下的 `.AsciidocFX-1.7.8` 的 `asciidoctor_pdf.json`
+* 如果你剛安裝 , 還沒有啟動過 AsciidocFX , 開啟你的 AsciidocFX 安裝目錄下的 conf 子目錄下 的 `asciidoctor_pdf.json`    
+
+2. 在 attributes 下加入以下內容
+
+[source,json]
+----
+"pdf-themesdir": "uri:classloader:/data/themes",
+"pdf-fontsdir": "uri:classloader:/data/fonts;GEM_FONTS_DIR;",
+"pdf-theme": "default-ext-notosans-cjk-tc",
+----
+
+3. 修改後的內容如下，然後存檔，啟動 AsciidocFX
+
+[source,json]
+----
+{
+    "backend": "pdf",
+    "jsPlatform": "Asciidoctorj",
+    "safe": "unsafe",
+    "header_footer": true,
+    "converter": "ASCIIDOCTOR",
+    "attributes": {
+        "pdf-themesdir": "uri:classloader:/data/themes",
+        "pdf-fontsdir": "uri:classloader:/data/fonts;GEM_FONTS_DIR;",
+        "pdf-theme": "default-ext-notosans-cjk-tc",
+        "showtitle": "true",
+        "allow-uri-read": "true",
+        "experimental": "true",
+        "source-highlighter": "rouge",
+        "imagesdir": "images",
+        "icons": "font"
+    }
+}
+----
+
+pdf-theme: 可以選擇以下其中一種
+
+* default-ext-notosans-cjk-tc
+* default-notosans-cjk-tc
+* notosans-cjk-tc
+* default-ext-notosansmono-cjk-tc
+* default-notosansmono-cjk-tc
+* notosansmono-cjk-tc
+* default-ext-notoserif-cjk-tc
+* default-notoserif-cjk-tc
+* notoserif-cjk-tc
+
+
+=== AsciidoctorJ
+
+
+1. 將下載的 jar 複製到 asciidoctorj/lib 目錄下
+
+EX: pdf-ext-notosans-cjk-tc.jar, pdf-ext-notosansmono-cjk-tc.jar, pdf-ext-notoserif-cjk-tc.jar
+
+2. 請自行下載 asciidoctorj-pdf-2.3.0.jar 到  asciidoctorj/lib 目錄下
+
+3. 修改 asciidoctorj/bin/asciidoctorj 內容
+
+* 把原先的 asciidoctorj-pdf-1.6.2.jar 改成 asciidoctorj-pdf-2.3.0.jar
+* 加入 pdf-ext-notosans-cjk-tc.jar, pdf-ext-notosansmono-cjk-tc.jar, pdf-ext-notoserif-cjk-tc.jar
+
+[source,bash]
+.asciidoctorj
+----
+#CLASSPATH=$APP_HOME/lib/asciidoctorj-2.5.4-bin.jar:$APP_HOME/lib/asciidoctorj-2.5.4.jar:$APP_HOME/lib/asciidoctorj-api-2.5.4.jar:$APP_HOME/lib/asciidoctorj-epub3-1.5.1.jar:$APP_HOME/lib/asciidoctorj-diagram-2.2.3.jar:$APP_HOME/lib/asciidoctorj-diagram-ditaamini-1.0.3.jar:$APP_HOME/lib/asciidoctorj-diagram-plantuml-1.2022.5.jar:$APP_HOME/lib/asciidoctorj-pdf-1.6.2.jar:$APP_HOME/lib/asciidoctorj-revealjs-4.1.0.jar:$APP_HOME/lib/jruby-complete-9.3.4.0.jar:$APP_HOME/lib/jcommander-1.82.jar:$APP_HOME/lib/pdf-ext-kaigengothic-tw.jar:$APP_HOME/lib/pdf-ext-notosansmono-cjk-tc.jar:$APP_HOME/lib/pdf-ext-notosans-cjk-tc.jar:$APP_HOME/lib/pdf-ext-notoserif-cjk-tc.jar
+
+CLASSPATH=$APP_HOME/lib/asciidoctorj-2.5.4-bin.jar:$APP_HOME/lib/asciidoctorj-2.5.4.jar:$APP_HOME/lib/asciidoctorj-api-2.5.4.jar:$APP_HOME/lib/asciidoctorj-epub3-1.5.1.jar:$APP_HOME/lib/asciidoctorj-diagram-2.2.3.jar:$APP_HOME/lib/asciidoctorj-diagram-ditaamini-1.0.3.jar:$APP_HOME/lib/asciidoctorj-diagram-plantuml-1.2022.5.jar:$APP_HOME/lib/asciidoctorj-pdf-2.3.0.jar:$APP_HOME/lib/asciidoctorj-revealjs-4.1.0.jar:$APP_HOME/lib/jruby-complete-9.3.4.0.jar:$APP_HOME/lib/jcommander-1.82.jar:$APP_HOME/lib/pdf-ext-notosansmono-cjk-tc.jar:$APP_HOME/lib/pdf-ext-notosans-cjk-tc.jar:$APP_HOME/lib/pdf-ext-notoserif-cjk-tc.jar
+----
+
+
+[IMPORTANT] 
+.為何要改用 asciidoctorj-pdf-2.3.0.jar
+====
+
+因為 asciidoctorj-pdf-2.x 修改了某些關於存取 pdf-theme, pdf-fontsdir 的問題, 所以建議優先使用 asciidoctorj-pdf-2.x
+
+====
+
+
+[source,bash]
+.AsciidoctorJ 的使用範例
+----
+asciidoctorj -b pdf \
+  -a allow-uri-read \
+  -a icons="font" \
+  -a idprefix \
+  -a idseparator="-" \
+  -a imagesdir="images" \
+  -a pagenums \
+  -a toc \
+  -a scripts="cjk" \
+  -a pdf-fontsdir="uri:classloader:/data/fonts;GEM_FONTS_DIR;" \
+  -a pdf-themesdir="uri:classloader:/data/themes" \
+  -a pdf-theme="default-ext-notosans-cjk-tc" \
+  PDF-CJK-TEST_TW.adoc
+----
+
+pdf-theme: 可以選擇以下其中一種
+
+* default-ext-notosans-cjk-tc
+* default-notosans-cjk-tc
+* notosans-cjk-tc
+* default-ext-notosansmono-cjk-tc
+* default-notosansmono-cjk-tc
+* notosansmono-cjk-tc
+* default-ext-notoserif-cjk-tc
+* default-notoserif-cjk-tc
+* notoserif-cjk-tc
+
+=== Maven
+
+1. 將下載的 jar 複製到 asciidoctorj/lib 目錄下
+
+EX: pdf-ext-notosans-cjk-tc.jar, pdf-ext-notosansmono-cjk-tc.jar, pdf-ext-notoserif-cjk-tc.jar
+
+2. 安裝 jar 檔案到你的 Maven Local Repo ( /home/demo/.m2)
+
+以下以語言 tc 為例, 執行以下指令安裝 jar 檔案到 你的 Local Maven Repo。
+
+[IMPORTANT] 
+.注意事項
+==== 
+在執行以下指令前, 執行位置要在你下載的 jar 檔案所在目錄。
+====
+
+[source,bash]
+----
+mvn install:install-file \
+  -Dfile=pdf-ext-notoserif-cjk-tc.jar \
+  -DgroupId=com.life888888.lab \
+  -DartifactId=pdf-ext-notoserif-cjk-tc \
+  -Dversion=0.1.0 \
+  -Dpackaging=jar
+
+
+mvn install:install-file \
+  -Dfile=pdf-ext-notosans-cjk-tc.jar \
+  -DgroupId=com.life888888.lab \
+  -DartifactId=pdf-ext-notosans-cjk-tc \
+  -Dversion=0.1.0 \
+  -Dpackaging=jar
+
+mvn install:install-file \
+  -Dfile=pdf-ext-notosansmono-cjk-tc.jar \
+  -DgroupId=com.life888888.lab \
+  -DartifactId=pdf-ext-notosansmono-cjk-tc \
+  -Dversion=0.1.0 \
+  -Dpackaging=jar
+----
+
+
+3. 設定
+
+以下以 https://github.com/asciidoctor/asciidoctor-maven-examples/tree/main/asciidoctor-pdf-example 為例。
+
+下載到本機後, 首先進行測試，確認 專案可以正常運行
+
+執行以下指令
+
+[source,bash]
+----
+cd asciidoctor-pdf-example
+
+mvn
+----
+
+執行完成後, 檢視 target/generated-docs/example-manual.pdf 是否產出。
+
+image:maven-pdf-default-page.png[]
+
+開啟 example-manual.pdf 檢查字型屬性 , 確認為 預設的 NotoSerif
+
+image:maven-pdf-default-fonts.png[]
+
+
+接著要修改 pom.xml
+
+找到 build -> plugins -> plugin  (asciidoctor-maven-plugin)
+
+dependencies 之下加入以下內容, 可以只加入一個要加入的字型與樣式 , 例如：pdf-ext-notoserif-cjk-tc
+
+[source,xml]
+----
+                        <dependency>
+                           <groupId>com.life888888.lab</groupId>
+                           <artifactId>pdf-ext-notoserif-cjk-tc</artifactId>
+                           <version>0.1.0</version>
+                       </dependency>
+                       <dependency>
+                           <groupId>com.life888888.lab</groupId>
+                           <artifactId>pdf-ext-notosans-cjk-tc</artifactId>
+                           <version>0.1.0</version>
+                       </dependency>
+                       <dependency>
+                           <groupId>com.life888888.lab</groupId>
+                           <artifactId>pdf-ext-notosansmono-cjk-tc</artifactId>
+                           <version>0.1.0</version>
+                       </dependency>
+----
+
+然後找到 execution (generate-pdf-doc) -> configuration , 在 attributes 之下加入以下參數設定
+
+[source,xml]
+----
+           <attributes>
+                 <pdf-fontsdir>uri:classloader:/data/fonts;GEM_FONTS_DIR;</pdf-fontsdir>        
+                 <pdf-themesdir>uri:classloader:/data/themes</pdf-themesdir>
+                 <pdf-theme>default-ext-notosans-cjk-tc</pdf-theme>
+                 ...
+----
+
+
+再次執行以下指令
+
+[source,bash]
+----
+cd asciidoctor-pdf-example
+
+mvn clean generate-resources
+----
+
+執行完成後, 檢視 target/generated-docs/example-manual.pdf 是否產出。
+
+image:maven-pdf-pdf-ext-notosans-cjk-page.png[]
+
+開啟 example-manual.pdf 檢查字型屬性 , 確認為 已經是 NotoSansCJKTC
+
+image:maven-pdf-pdf-ext-notosans-cjk-fonts.png[]
+
+=== Asciidoctor
+
+1. 請下載 zip 檔案(EX: notoserif-cjk-tc.zip ), 後解壓縮。假設解壓縮後放在 /home/demo/Asciidoctor-PDF-CJK 目錄下
+
+[source,bash]
+----
+.
+├── fonts
+│   ├── LICENSE
+│   ├── notoserif-cjk-tc-bold_italic.ttf
+│   ├── notoserif-cjk-tc-bold.ttf
+│   ├── notoserif-cjk-tc-italic.ttf
+│   └── notoserif-cjk-tc-normal.ttf
+└── themes
+    ├── default-ext-notoserif-cjk-tc-pdf-1-theme.yml
+    ├── default-ext-notoserif-cjk-tc-theme.yml
+    ├── default-notoserif-cjk-tc-pdf-1-theme.yml
+    ├── default-notoserif-cjk-tc-theme.yml
+    ├── LICENSE
+    ├── LICENSE-asciidoctor-pdf
+    ├── LICENSE-asciidoctor-pdf-cjk-kai_gen_gothic
+    ├── notoserif-cjk-tc-pdf-1-theme.yml
+    └── notoserif-cjk-tc-theme.yml
+----
+
+2. 建議使用 asciidoctor-pdf 2.x
+
+請行以下指令
+
+[source,bash]
+----
+sudo gem install asciidoctor-pdf --pre
+----
+
+3. 執行指令如下
+
+[source,bash]
+----
+asciidoctor-pdf \
+  -a scripts="cjk" \
+  -a allow-uri-read \
+  -a icons="font" \
+  -a idprefix \
+  -a idseparator="-" \
+  -a imagesdir="images" \
+  -a pagenums \
+  -a toc \  
+  -a pdf-theme="default-notoserif-cjk-tc" \
+  -a pdf-themesdir="/home/demo/Asciidoctor-PDF-CJK/themes" \  
+  -a pdf-fontsdir="/home/demo/Asciidoctor-PDF-CJK/fonts;GEM_FONTS_DIR;" \
+  PDF-CJK-TEST_TW.adoc
+----
+
+pdf-theme 可以使用 `default-notoserif-cjk-tc`(如果有設定 pdf-themesdir) 或是 `/home/demo/Asciidoctor-PDF-CJK/themes/default-notoserif-cjk-tc-theme.yml`
+
+=== Gradle
+
+1. 請下載 zip 檔案(EX: notoserif-cjk-tc.zip ), 後解壓縮。假設解壓縮後放在 /home/demo/Asciidoctor-PDF-CJK 目錄下
+
+2. 以下以 https://github.com/asciidoctor/asciidoctor-gradle-examples 為例。
+下載到本機後, 首先進行測試，確認 專案可以正常運行
+
+執行以下指令
+
+[source,bash]
+----
+cd asciidoctor-gradle-examples/asciidoc-to-pdf-example
+
+./gradlew asciidoctor
+----
+
+可以在 build/docs/asciidocPdf 目錄下找到 example-manual.pdf
+
+3. 修改設定。加入 pdf-fontsdir,pdf-themesdir,pdf-theme 的設定。
+
+[source,bash]
+.asciidoc-to-pdf-example/build.gradle
+----
+...
+
+asciidoctorPdf {
+  dependsOn asciidoctorGemsPrepare
+
+  baseDirFollowsSourceFile()
+
+  asciidoctorj {
+    requires 'rouge'
+    attributes 'build-gradle': file('build.gradle'),
+        'scripts': 'cjk',
+        'pdf-fontsdir': '/home/demo/Asciidoctor-PDF-CJK/fonts;GEM_FONTS_DIR;',
+        'pdf-themesdir': '/home/demo/Asciidoctor-PDF-CJK/themes',
+        'pdf-theme': 'default-notoserif-cjk-tc-pdf-1',
+...
+----
+
+
+[IMPORTANT] 
+.注意事項
+==== 
+因為 Asciidcotor Gradle Plugin 目前使用 asciidoctor-pdf-1.x , 所以 pdf-theme 後面必須要使用有 `pdf-1` 的 theme。
+
+* default-notoserif-cjk-tc-pdf-1-theme.yml
+* notoserif-cjk-tc-pdf-1-theme.yml
+* default-ext-notoserif-cjk-tc-pdf-1-theme.yml
+====
+
+
+== PDF 套用 Theme 層級
+
+=== AscidocFX Level
+AscidocFX 在套用 PDF 時會使用已設定預設套表。 Asciidoc 檔案(.adoc)不需要設定 pdf-fontsdir,pdf-themesdir,pdf-theme。
+
+
+=== Single Adoc File Level - Use Installed Jar (Fonts And Themes)
+如果只有某個 adoc 檔案(EX: AAA.adoc)想要套用不同的 Theme，可以這樣做：
+
+直接在 AAA.adoc 檔頭, 加入 pdf-fontsdir,pdf-themesdir,pdf-theme 設定。
+
+[source,asciidoc]
+----
+:pdf-theme: default-notoserif-cjk-{font_lang}
+----
+
+=== Single Adoc File Level - Use Custom Themes
+如果只有某個 adoc 檔案(EX: AAA.adoc)想要修改與已經安裝不一樣的 theme 設定,例如字型顏色，可以這樣做：
+
+(你不需要修改 Installed Jar 裡面的 theme 檔案)
+
+1. 在 adoc 檔案所在目錄, 建立子目錄 custom-theme
+
+2. 在子目錄 custom-theme, 建立 custom-default-notoserif-cjk-{font_lang}-theme.yml
+
+3. 修改 custom-default-notoserif-cjk-{font_lang}-theme.yml , 調整要變更的設定
+
+4. 在 AAA.adoc 檔頭, 加入 pdf-fontsdir,pdf-themesdir,pdf-theme 設定,指向 custom-theme。
+
+[source,asciidoc]
+----
+:pdf-themesdir: {docdir}/custom-theme
+:pdf-theme: custom-default-notoserif-cjk-{font_lang}
+----
+
+延伸自訂 Custom Theme
+
+[source,bash]
+----
+.
+├── PDF-CJK-TEST_TW.adoc
+└── theme
+    ├── cover.png
+    └── custom-default-ext-notosans-cjk-tc-theme.yml
+----
+
+ 
+.custom-default-ext-notosans-cjk-tc-theme.yml
+[source,yaml]
+----
+extends:
+  - default-ext-notosans-cjk-tc
+title-page:
+  align: left
+  logo:
+    image: image:{docdir}/theme/cover.png[align=center]
+    top: 0%
+page:
+  margin: [0.75in, 1in, 0.75in, 1in]
+base:
+  line-height-length: 20
+heading:
+  font-color: #FF8000
+  font-size: 12
+  line-height: 1.2
+link:
+  font-color: #009900
+header:
+  height: 0.75in
+  line-height: 1
+  recto:
+    right:
+      content: '{document-title}'
+  verso:
+    left:
+      content: '{document-title}'
+footer:
+  height: 0.75in
+  line-height: 1
+  recto:
+    right:
+      content: '{chapter-title} | *{page-number}*'
+  verso:
+    left:
+      content: '*{page-number}* | {chapter-title}'
+image:
+  align: center
+caption:
+  align: center
+  font-color: #FF0000
+  font-size: 10
+----
+
+以下使用 AsciidoctorJ 為例把修改後參數列舉於以下
+
+[source,bash]
+----
+asciidoctorj -b pdf \
+  -a allow-uri-read \
+  -a icons="font" \
+  -a idprefix \
+  -a idseparator="-" \
+  -a imagesdir="images" \
+  -a pagenums \
+  -a toc \
+  -a scripts="cjk" \
+  -a pdf-fontsdir="uri:classloader:/data/fonts;GEM_FONTS_DIR;" \
+  -a pdf-themesdir="uri:classloader:/data/themes" \
+  -a pdf-theme="/home/demo/Documents/TestAsciidoc/theme/custom-default-ext-notosans-cjk-tc-theme.yml" \
+  -o PDF-CJK-TEST_TW-custom-default-ext-notosans-cjk-tc-theme.pdf \
+  PDF-CJK-TEST_TW.adoc
+----
+  
+ 
+
+比對 PDF-CJK-TEST_TW.pdf vs PDF-CJK-TEST_TW-custom-default-ext-notosans-cjk-tc-theme.pdf
+
+.theme: default-ext-notosans-cjk-tc vs custom-default-ext-notosans-cjk-tc
+image:asciidoctorj-default-vs-custom-1.png[]
+
+[source,bash]
+----
+asciidoctorj -b pdf \
+  -a doctype=book \
+  -a allow-uri-read \
+  -a icons="font" \
+  -a idprefix \
+  -a idseparator="-" \
+  -a imagesdir="images" \
+  -a pagenums \
+  -a toc \
+  -a scripts="cjk" \
+  -a pdf-fontsdir="uri:classloader:/data/fonts;GEM_FONTS_DIR;" \
+  -a pdf-themesdir="uri:classloader:/data/themes" \
+  -a pdf-theme="default-ext-notosans-cjk-tc" \
+  -o PDF-CJK-TEST_TW_BOOK.pdf \
+  PDF-CJK-TEST_TW.adoc
+----
+
+[source,bash]
+----
+asciidoctorj -b pdf \
+  -a doctype=book \
+  -a allow-uri-read \
+  -a icons="font" \
+  -a idprefix \
+  -a idseparator="-" \
+  -a imagesdir="images" \
+  -a pagenums \
+  -a toc \
+  -a scripts="cjk" \
+  -a pdf-fontsdir="uri:classloader:/data/fonts;GEM_FONTS_DIR;" \
+  -a pdf-themesdir="uri:classloader:/data/themes" \
+  -a pdf-theme="/home/demo/Documents/TestAsciidoc/theme/custom-default-ext-notosans-cjk-tc-theme.yml" \
+  -o PDF-CJK-TEST_TW_BOOK-custom-default-ext-notosans-cjk-tc-theme.pdf \
+  PDF-CJK-TEST_TW.adoc
+----
+
+.doctype=book, theme: default-ext-notosans-cjk-tc vs custom-default-ext-notosans-cjk-tc  
+image:asciidoctorj-default-vs-custom-2.png[]
+
+== Examples Files
+
+附上測試用的 Examples 檔案在 examples 目錄下。
+
+包含 Custom Theme。
+
+== Contributing
+
+You can re-generate jar and zip files, please refer to the following settings:
+
+=== Requirements
+* OS: Ubuntu 20.04 or Other Linux
+
+* JDK: JDK 8+, only for `jar` command to package jar files.
+
+=== Build Step
+
+Download this project Source Code.
+
+
+.Unzip Project and enter the folder
+[source,bash]
+----
+$ unzip asciidoctor-pdf-cjk-ext.zip
+
+$ cd asciidoctor-pdf-cjk-ext
+----
+
+Execute build-themes-all.sh
+
+.Edit build-themes-all.sh
+[source,bash]
+----
+./build-themes-all.sh
+----
+
+[INFO] 
+.You can build theme by font and language setting.
+====
+
+* Edit build-themes-all.sh
+
+[source,bash]
+----
+# * Noto Sans CJK
+# * Noto Sans Mono CJK
+# * Noto Serif CJK
+export BUILD_FONT_FS_SANS=1
+export BUILD_FONT_FS_SANSMONO=1
+export BUILD_FONT_FS_SERIF=1
+
+# Languages: 1 = Build , 0 = None
+# * SC (Simplified Chinese)
+# * TC (Traditional Chinese)
+# * HK (Hong Kong)
+# * JP (Japanese)
+# * KR (Korean)
+export BUILD_FONT_LANG_SC=0
+export BUILD_FONT_LANG_TC=1
+export BUILD_FONT_LANG_HK=0
+export BUILD_FONT_LANG_JP=0
+export BUILD_FONT_LANG_KR=0
+----
+
+====
+
+You can find the creted file in releases folder , include jar, zip files.
+
+
+== Copyright
+
+Copyright (C) 2022 life888888. and the asciidoctor-pdf-cjk-ext Project.
+
+=== Fonts License
+
+Free use of this project fonts is granted under the terms of the SIL Open Font License.
+
+* Fonts License: cjk-fonts-ttf fonts - **SIL Open Font License.**
+
+=== Code License
+
+Free use of this project software is granted under the terms of the **MIT License**.
+
+=== Third Party Theme License
+
+My theme is modify from Two Projects:
+
+* Asciidoctor::Pdf::CJK::KaiGenGothic 
+https://github.com/chloerei/asciidoctor-pdf-cjk-kai_gen_gothic
+
+MIT License - Copyright (c) 2015 Rei
+
+* Asciidoctor PDF: A native PDF converter for AsciiDoc
+https://github.com/asciidoctor/asciidoctor-pdf
+
+MIT License - Copyright (C) 2014-present OpenDevise Inc. and the Asciidoctor Project
+
+== TODO
+
+* Examples 檔案(Maven, Gradle) 跟詳細的使用說明檔案會再整理出來
+* Gradle 如何套用 jar 方式可能要再測試
+* Gradle 如何改用 asciidoc-pdx-2.x jar 可能要再測試
+
+
