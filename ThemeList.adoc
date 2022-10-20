@@ -1,0 +1,104 @@
+= asciidoctor-pdf-cjk-ext Theme List
+:experimental:
+ifdef::env-github[]
+:toc:
+:toc-placement: preamble
+endif::[]
+ifndef::env-github[]
+:toc:
+:toc-placement: left
+endif::[]
+:imagesdir: images
+:font_lang: tc
+
+
+Support 3 Fonts:
+
+* Noto Sans CJK
+* Noto Sans Mono CJK
+* Noto Serif CJK
+
+.Comparison screen with different fonts (Noto Sans, Noto Sans, Noto Serif), same theme (default-ext-XXX)
+image:asciidoctor-pdf-cjk-ext-fonts-1.png[]
+
+Every Font Have 3 kinds of theme: (__FONTXXX__ is **sans**, **sansmono**, **serif**)
+
+* default-ext-noto__FONTXXX__-cjk-xx
+* default-noto__FONTXXX__-cjk-xx
+* notoFON__TXXX__-cjk-xx-theme
+
+.Comparison screen using the same font (Noto Sans) and different themes (default-ext-XXX, default-XXX, XXX)
+image:asciidoctor-pdf-cjk-ext-themes-1.png[]
+
+Support 5 Language Code:
+
+* **tc** : Traditional Chinese
+* **sc** : Simplified Chinese
+* **hk** : Hong Kong
+* **jp** : Japanese
+* **kr** : Korean
+
+
+== Theme List
+Please replace **xx** by your language code.
+
+For example, your language is **Traditional Chinese** , your language code is **tc**.
+
+`default-ext-notosans-cjk-**xx**` means `default-ext-notosans-cjk-**tc**`
+  
+  
+=== Noto Sans CJK
+
+.Noto Sans CJK Theme List
+[cols="1,1"]
+|===
+|THEME NAME | THEME FILE 
+
+|default-ext-notosans-cjk-xx
+|default-ext-notosans-cjk-xx-theme.yml
+
+|default-notosans-cjk-xx
+|default-notosans-cjk-xx-theme.yml
+
+|notosans-cjk-xx-theme
+|notosans-cjk-xx-theme.yml
+
+|===
+
+=== Noto Sans Mono CJK
+
+.Noto Sans Mono CJK Theme List
+[cols="1,1"]
+|===
+|THEME NAME | THEME FILE 
+
+|default-ext-notosansmono-cjk-xx
+|default-ext-notosansmono-cjk-xx-theme.yml
+
+|default-notosansmono-cjk-xx
+|default-notosansmono-cjk-xx-theme.yml
+
+|notosansmono-cjk-xx-theme
+|notosansmono-cjk-xx-theme.yml
+
+|===
+
+=== Noto Serif CJK
+
+.Noto Serif CJK Theme List
+[cols="1,1"]
+|===
+|THEME NAME | THEME FILE 
+
+|default-ext-notoserif-cjk-xx
+|default-ext-notoserif-cjk-xx-theme.yml
+
+|default-notoserif-cjk-xx
+|default-notoserif-cjk-xx-theme.yml
+
+|notoserif-cjk-xx-theme
+|notoserif-cjk-xx-theme.yml
+
+|===
+
+
