@@ -522,53 +522,11 @@ pdf-theme can use `default-notoserif-cjk-tc` (if pdf-themesdir is set) or `/home
 
 === Gradle
 
-1. Take https://github.com/asciidoctor/asciidoctor-gradle-examples as an example.
+Please reference https://github.com/life888888/asciidoctor-pdf-cjk-ext-gradle-examples
 
-After downloading to this computer, first test to confirm that the project can run normally.
+It contains various usage examples of using Asciidoctor Gradle Plugin with asciidoctor-pdf-cjk-ext theme.
 
-Execute the following commands.
-
-[source,bash]
-----
-cd asciidoctor-gradle-examples/asciidoc-to-pdf-example
-
-./gradlew asciidoctor
-----
-
-You can find example-manual.pdf in the build/docs/asciidocPdf directory.
-
-3. Modify settings. Added pdf-fontsdir,pdf-themesdir,pdf-theme settings.
-
-[source,bash]
-.asciidoc-to-pdf-example/build.gradle
-----
-...
-
-asciidoctorPdf {
-  dependsOn asciidoctorGemsPrepare
-
-  baseDirFollowsSourceFile()
-
-  asciidoctorj {
-    requires 'rouge'
-    attributes 'build-gradle': file('build.gradle'),
-        'scripts': 'cjk',
-        'pdf-fontsdir': '/home/demo/Asciidoctor-PDF-CJK/fonts;GEM_FONTS_DIR;',
-        'pdf-themesdir': '/home/demo/Asciidoctor-PDF-CJK/themes',
-        'pdf-theme': 'default-notoserif-cjk-tc-pdf-1',
-...
-----
-
-
-[IMPORTANT] 
-.IMPORTANT
-==== 
-Because Asciidcotor Gradle Plugin currently uses asciidoctor-pdf-1.x , pdf-theme must be followed by a theme with `xxx-pdf-1`.
-
-* default-notoserif-cjk-tc-pdf-1-theme.yml
-* notoserif-cjk-tc-pdf-1-theme.yml
-* default-ext-notoserif-cjk-tc-pdf-1-theme.yml
-====
+Contains examples of using Custom Theme.
 
 
 == PDF apply Theme level
