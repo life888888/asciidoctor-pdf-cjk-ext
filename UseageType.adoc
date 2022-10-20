@@ -1,0 +1,82 @@
+= asciidoctor-pdf-cjk-ext THEME Useage Types
+
+asciidoctor-pdf-cjk-ext THEME supports 3 ways to use.
+
+* <<UseAsFile,Use as file>>
+* <<UseAsJar,Use as Jar file directly Without Maven installed>>
+* <<UseAsMavenLocal,Use as Maven Local Repo, Need install Maven>>
+
+
+Supports 5 Language Code:
+
+* **tc** : Traditional Chinese
+* **sc** : Simplified Chinese
+* **hk** : Hong Kong
+* **jp** : Japanese
+* **kr** : Korean
+
+Every Language supports 3 fonts:
+
+* Noto Sans CJK
+* Noto Sans Mono CJK
+* Noto Serif CJK
+
+
+[#UseAsFile]
+== Type1 - Use as file
+
+Run Command , `./install-zip-to-downloaded-resources-dir.sh xx`
+
+Please replace **xx** by your language code( EX: `tc`).
+
+[source,bash]
+----
+$ ./install-zip-to-downloaded-resources-dir.sh tc
+----
+
+It will install asciidoctor-pdf-cjk-ext THEME to `downloaded-resources` folder under your user home directory,
+
+`~/downloaded-resources` or `/home/YOUR-USERNAME/downloaded-resources`
+
+[#UseAsJar]
+== Type2 - Use as Jar file directly Without Maven installed
+
+If you don't have Maven installed, or don't want to install asciidoctor-pdf-cjk-ext to your Maven Local Repo, you can choose this method.
+
+Run Command , `./install-jar-to-libs-dir.sh xx`
+
+Please replace **xx** by your language code( EX: `tc`).
+
+[source,bash]
+----
+$ ./install-jar-to-libs-dir.sh tc
+----
+
+It will install asciidoctor-pdf-cjk-ext THEME to `libs` folder under your user home directory,
+
+`~/libs` or `/home/YOUR-USERNAME/libs`
+
+[#UseAsMavenLocal]
+== Type3 - Use as Maven Local Repo, Need install Maven
+
+Your machine needs to have Maven installed.
+
+Run Command , `./install-jar-to-maven-local-repo.sh xx`
+
+Please replace **xx** by your language code( EX: `tc`).
+
+[source,bash]
+----
+$ ./install-jar-to-maven-local-repo.sh tc
+----
+
+It will install asciidoctor-pdf-cjk-ext THEME to your maven local repo.
+
+`~/.m2` or `/home/YOUR-USERNAME/.m2`
+
+=== Add reference
+Please replace **xx** by your language code( EX: `tc`).
+
+* "com.life888888.lab:pdf-ext-notoserif-cjk-xx:0.1.0"
+* "com.life888888.lab:pdf-ext-notosansmono-cjk-xx:0.1.0"
+* "com.life888888.lab:pdf-ext-notosans-cjk-xx:0.1.0"
