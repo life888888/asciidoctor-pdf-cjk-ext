@@ -1,6 +1,6 @@
-= asciidoctor-pdf-cjk-ext THEME Useage Types
+= asciidoctor-pdf-cjk-ext PDF THEME Usage Types
 
-asciidoctor-pdf-cjk-ext THEME supports 3 ways to use.
+asciidoctor-pdf-cjk-ext PDF THEME supports 3 ways to use.
 
 * <<UseAsFile,Use as file>>
 * <<UseAsJar,Use as Jar file directly Without Maven installed>>
@@ -75,8 +75,68 @@ It will install asciidoctor-pdf-cjk-ext THEME to your maven local repo.
 `~/.m2` or `/home/YOUR-USERNAME/.m2`
 
 === Add reference
+
+==== Gradle
 Please replace **xx** by your language code( EX: `tc`).
 
 * "com.life888888.lab:pdf-ext-notoserif-cjk-xx:0.1.0"
 * "com.life888888.lab:pdf-ext-notosansmono-cjk-xx:0.1.0"
 * "com.life888888.lab:pdf-ext-notosans-cjk-xx:0.1.0"
+
+[source,bash]
+.build.gradle
+----
+configurations {
+    asciidoctorExt
+}
+
+dependencies {
+ ...
+   // * TC (Traditional Chinese)
+   asciidoctorExt "com.life888888.lab:pdf-ext-notoserif-cjk-tc:0.1.0"
+   asciidoctorExt "com.life888888.lab:pdf-ext-notosansmono-cjk-tc:0.1.0"
+   asciidoctorExt "com.life888888.lab:pdf-ext-notosans-cjk-tc:0.1.0"
+ ...
+ }
+  asciidoctorj {
+     modules {
+       asciidoctorj {
+         ...
+         configurations "asciidoctorExt"
+        }
+        ...
+----
+
+==== Maven
+
+[source,bash]
+.pom.xml
+----
+<plugins>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>${asciidoctor.maven.plugin.version}</version>
+                <dependencies>
+                    <!-- tc (Traditional Chinese) -->
+                    <!-- Font notoserif-cjk-tc -->
+                    <dependency>
+                        <groupId>com.life888888.lab</groupId>
+                        <artifactId>pdf-ext-notoserif-cjk-tc</artifactId>
+                        <version>0.1.0</version>
+                    </dependency>
+                    <!-- Font notosans-cjk-tc -->
+                    <dependency>
+                        <groupId>com.life888888.lab</groupId>
+                        <artifactId>pdf-ext-notosans-cjk-tc</artifactId>
+                        <version>0.1.0</version>
+                    </dependency>
+                    <!-- Font notosansmono-cjk-tc -->
+                    <dependency>
+                        <groupId>com.life888888.lab</groupId>
+                        <artifactId>pdf-ext-notosansmono-cjk-tc</artifactId>
+                        <version>0.1.0</version>
+                    </dependency>
+                    ...
+----
+

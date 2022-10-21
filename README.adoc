@@ -31,17 +31,31 @@ Asciidoctor PDF CJK Ext is used to provide the theme and ttf files needed by Asc
 
 * Provide two usage modes: jar file and directory mode.
 
+== Quick Install
+
+You don't need to download the project source or a single zip or jar.
+
+Please read link:UsageType.adoc[Usage Type] first to decide what you want to install.
+
+Please choose one of the following to install:
+
+* {url-project-repo}/main/install-zip-to-downloaded-resources-dir.sh[install-zip-to-downloaded-resources-dir.sh]
+* {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.sh]
+* {url-project-repo}/main/install-jar-to-maven-local-repo.sh[install-jar-to-maven-local-repo.sh]
 
 == Download Themes And Fonts Package
 
-If you are using AsciidoctorJ, AsciidocFX, Maven recommends using the Jar first.
+If you are using AsciidoctorJ, AsciidocFX, Maven, Gradle recommends using the Jar first.
 
-If you are using Asciidoctor, Gradle recommends using the Download Zip first.
-
+If you are using Asciidoctor recommends using the Download Zip first.
 
 [cols="1,1,1"]
 |===
 |Runtimes | Jar Format | Zip Format
+
+|Asciidoctor
+|❌
+|✅ <<zip-format>>
 
 |AsciidoctorJ
 |✅ <<jar-format>>
@@ -51,16 +65,12 @@ If you are using Asciidoctor, Gradle recommends using the Download Zip first.
 |✅ <<jar-format>>
 |✅ <<zip-format>>
 
-|Asciidoctor
-|❌
-|✅ <<zip-format>>
-
 |Maven
 |✅ <<jar-format>>
 |✅ <<zip-format>>
 
 |Gradle
-|❌
+|✅ <<jar-format>>
 |✅ <<zip-format>>
 
 |=== 
@@ -143,19 +153,28 @@ Please choose one of the downloads according to the font and language you want t
 |=== 
 
 
-== Useage
+== Usage
 
 === AsciidocFX
 
 [IMPORTANT] 
 .Please confirm the version of AsciidocFX first
 ====
-AsciidocFX-1.7.6 only supports PDF Converter to ASCIIDOCTOR.
+AsciidocFX-1.7.4 does not supports PDF Converter ASCIIDOCTOR.
 ====
 
 1. Please place the downloaded jar file in the AsciidocFX/lib directory.
 
-EX: pdf-ext-notosans-cjk-tc.jar, pdf-ext-notosansmono-cjk-tc.jar, pdf-ext-notoserif-cjk-tc.jar
+Download {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.sh]
+
+change install-jar-to-libs-dir.sh parameter `tc` to your language (`jp`, `kr`, `sc`, `hk`) 
+
+[source,bash]
+----
+$ chmod u+x install-jar-to-libs-dir.sh
+$ ./install-jar-to-libs-dir.sh tc
+$ cp ~/libs/*.jar ~/TOOLS/AsciidocFX/lib
+----
 
 2. Modify AsciidocFX memory configuration
 
@@ -191,7 +210,7 @@ image:asciidocfx-asciidoctor-pdf-setup.png[AsciidocFX PDF Settings]
 ====
 * Please make sure that PDF Converter is currently selected as ASCIIDOCTOR. If PDF Converter is currently selected as FOP, you will not see the above setting screen.
 
-* AsciidocFX AsciidocFX-1.7.6 PDF Converter default is ASCIIDOCTOR.
+* AsciidocFX AsciidocFX-1.7.6+ PDF Converter default is ASCIIDOCTOR.
 
 * If the PDF Converter you want to use is FOP, please leave this document, because this document does not support PDF Converter is FOP.
 ====
@@ -231,9 +250,9 @@ After saving, the AsciidocFX default will use the theme you set to wrap the PDF.
 
 ==== Modify the profile directly
 
-1. (If you are using AsciidocFX 1.7.8) ,
+1. (If you are using AsciidocFX 1.7.6+) ,
 
-* If you have already started AsciidocFX, open `asciidoctor_pdf.json` in `.AscidocFX-1.7.8` in your home directory
+* If you have already started AsciidocFX, open `asciidoctor_pdf.json` in `.AscidocFX-1.7.6` in your home directory
 * If you just installed and haven't started AsciidocFX yet, open `asciidoctor_pdf.json` in the conf subdirectory of your AsciidocFX installation directory
 
 2. Add the following under attributes:
@@ -281,6 +300,7 @@ pdf-theme: You can choose one of the following
 * default-notoserif-cjk-tc
 * notoserif-cjk-tc
 
+Change `tc` to your language (`jp`, `kr`, `sc`, `hk`). 
 
 === AsciidoctorJ
 
