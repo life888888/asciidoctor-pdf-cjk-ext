@@ -23,9 +23,18 @@ image:asciidoctor-pdf-cjk-ext-fonts-1.png[]
 
 Every Font Have 3 kinds of theme: (__FONTXXX__ is **sans**, **sansmono**, **serif**)
 
+For Asciidoctor PDF 2.x Theme
+
 * default-ext-noto__FONTXXX__-cjk-xx
 * default-noto__FONTXXX__-cjk-xx
-* notoFON__TXXX__-cjk-xx-theme
+* noto__FONTXXX__-cjk-xx
+
+For Asciidoctor PDF 1.x Theme
+
+* default-ext-noto__FONTXXX__-cjk-xx-pdf-1
+* default-noto__FONTXXX__-cjk-xx-pdf-1
+* noto__FONTXXX__-cjk-xx-pdf-1
+
 
 .Comparison screen using the same font (Noto Sans) and different themes (default-ext-XXX, default-XXX, XXX)
 image:asciidoctor-pdf-cjk-ext-themes-1.png[]
