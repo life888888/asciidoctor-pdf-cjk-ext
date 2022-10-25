@@ -829,8 +829,5 @@ MIT License - Copyright (C) 2014-present OpenDevise Inc. and the Asciidoctor Pro
 
 == TODO
 
-* Examples 檔案(Maven, Gradle) 跟詳細的使用說明檔案會再整理出來
-* Gradle 如何套用 jar 方式可能要再測試
-* Gradle 如何改用 asciidoc-pdx-2.x jar 可能要再測試
-
+* Examples 檔案(Maven) 跟詳細的使用說明檔案會再整理出來
 

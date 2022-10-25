@@ -813,7 +813,4 @@ MIT License - Copyright (C) 2014-present OpenDevise Inc. and the Asciidoctor Pro
 
 == TODO
 
-* Examples files (Maven, Gradle) and detailed instruction files will be sorted out.
-* How Gradle applies the jar method may need to be tested again.
-* How Gradle uses the asciidoc-pdx-2.x jar instead may have to be retested.
-
+* Examples files (Maven) and detailed instruction files will be sorted out.
