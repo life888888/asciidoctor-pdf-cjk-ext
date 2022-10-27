@@ -1,21 +1,17 @@
-# DOWNLOAD AND INSTALL asciidoctor-pdf-cjk-ext JAR TO local dir libs
+# DOWNLOAD AND INSTALL asciidoctor-pdf-cjk-ext ttf and theme TO local dir downloaded-resources
 # USEAGE:
-#         ./install-jar-to-libs-dir.sh
+#         ./install-zip-to-downloaded-resources-dir.sh
 #         YOU NEED CHANGE FONT_LANG=YOUR-LANG-CODE in this script file
 #         EX: FONT_LANG=tc
 #   OR
-#         ./install-jar-to-libs-dir.sh YOUR-LANG-CODE
+#         ./install-zip-to-downloaded-resources-dir.sh YOUR-LANG-CODE
 #         EX:
-#         ./install-jar-to-libs-dir.sh tc
+#         ./install-zip-to-downloaded-resources-dir.sh tc
 #
 
-# SAVE JAR Under Project DIR libs
-# export APP_DIR=`pwd`
-# mkdir -p $APP_DIR/libs
-# TMP_DIR=$APP_DIR/libs
-
-# SAVE JAR Under User Home DIR libs
+# SAVE ZIP Under User Home DIR downloaded-resources
 # CAN SHARE IT FOR MANY asciidoctor-pdf-cjk-ext-examples PROJECTS
+
 mkdir -p ~/downloaded-resources
 TMP_DIR=~/downloaded-resources
 echo "THIS FOLDER CREATE BY asciidoctor-pdf-cjk-ext-examples" >> $TMP_DIR/README.txt
