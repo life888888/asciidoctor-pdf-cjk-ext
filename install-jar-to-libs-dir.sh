@@ -16,6 +16,7 @@
 
 # SAVE JAR Under User Home DIR libs
 # CAN SHARE IT FOR MANY asciidoctor-pdf-cjk-ext-examples PROJECTS
+
 mkdir -p ~/libs
 TMP_DIR=~/libs
 echo "THIS FOLDER CREATE BY asciidoctor-pdf-cjk-ext-examples" >> $TMP_DIR/README.txt
