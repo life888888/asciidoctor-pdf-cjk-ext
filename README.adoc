@@ -19,6 +19,13 @@ The following English content is translated by Google, and the original Chinese 
 
 Asciidoctor PDF CJK Ext is used to provide the theme and ttf files needed by Asciidoctor / AsciidoctorJ / AsciidocFX / Maven / Gradle to generate PDF containing CJK languages (Chinese, Japanese, Korean).
 
+.Before modification - Chinese cannot be displayed normally, characters will show like tofu char (□)
+image:BeforePatch.png[]
+
+.After modification - Chinese can be displayed normally, bold, italic, and italic bold are all available
+image:AfterPatch.png[]
+
+
 == Overview
 
 Asciidoctor PDF CJK Ext is used to provide the theme and ttf files needed by Asciidoctor / AsciidoctorJ / AsciidocFX / Maven / Gradle to generate PDF containing CJK languages (Chinese, Japanese, Korean).
