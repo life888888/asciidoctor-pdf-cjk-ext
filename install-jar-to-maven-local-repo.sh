@@ -41,8 +41,17 @@ echo ""
 for FONT_NAME in ${NOTO_FONTS[@]}; do
   JAR_FILE=pdf-ext-noto${FONT_NAME}-cjk-${FONT_LANG}.jar
   DOWNLOAD_JAR_FILE_URL=${DOWNLOAD_BASE}/${JAR_FILE}
-  echo "wget $DOWNLOAD_JAR_FILE_URL"
-  wget $DOWNLOAD_JAR_FILE_URL
+  
+  if [[ $OSTYPE == 'darwin'* ]]; then
+     echo "macOS"
+     echo "curl -LJO $DOWNLOAD_JAR_FILE_URL"
+     curl -LJO $DOWNLOAD_JAR_FILE_URL     
+  else
+     echo "linux"
+     echo "wget $DOWNLOAD_JAR_FILE_URL"
+     wget $DOWNLOAD_JAR_FILE_URL     
+  fi
+  
   
   echo ""
   echo "mvn install:install-file \\

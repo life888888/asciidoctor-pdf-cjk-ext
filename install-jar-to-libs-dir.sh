@@ -54,8 +54,16 @@ for FONT_NAME in ${NOTO_FONTS[@]}; do
   if [ ! -f $JAR_FILE ]; then
     echo "$JAR_FILE not found!"
     DOWNLOAD_JAR_FILE_URL=${DOWNLOAD_BASE}/${JAR_FILE}
-    echo "wget $DOWNLOAD_JAR_FILE_URL"
-    wget $DOWNLOAD_JAR_FILE_URL
+    
+    if [[ $OSTYPE == 'darwin'* ]]; then
+       echo "macOS"
+       echo "curl -LJO $DOWNLOAD_JAR_FILE_URL"
+       curl -LJO $DOWNLOAD_JAR_FILE_URL
+    else
+       echo "linux"
+       echo "wget $DOWNLOAD_JAR_FILE_URL"
+       wget $DOWNLOAD_JAR_FILE_URL
+    fi
   else
     echo "$JAR_FILE is existing!"
   fi

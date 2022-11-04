@@ -46,6 +46,7 @@ Please read link:UsageType.adoc[Usage Type] first to decide what you want to ins
 
 Please choose one of the following to install:
 
+=== Linux / MacOS
 * {url-project-repo}/main/install-zip-to-downloaded-resources-dir.sh[install-zip-to-downloaded-resources-dir.sh]
 * {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.sh]
 * {url-project-repo}/main/install-jar-to-maven-local-repo.sh[install-jar-to-maven-local-repo.sh]
@@ -172,9 +173,9 @@ AsciidocFX-1.7.4 does not supports PDF Converter ASCIIDOCTOR.
 
 1. Please place the downloaded jar file in the AsciidocFX/lib directory.
 
-Download {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.sh]
+* Download {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.sh]
 
-change install-jar-to-libs-dir.sh parameter `tc` to your language (`jp`, `kr`, `sc`, `hk`) 
+change install-jar-to-libs-dir.sh parameter `tc` to your language (`jp`, `kr`, `sc`, `hk`)
 
 [source,bash]
 ----

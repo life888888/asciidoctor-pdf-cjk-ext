@@ -51,8 +51,15 @@ for FONT_NAME in ${NOTO_FONTS[@]}; do
   if [ ! -f "${ZIP_FILE}.save" ]; then
     echo "$ZIP_FILE not found!"
     DOWNLOAD_ZIP_FILE_URL=${DOWNLOAD_BASE}/${ZIP_FILE}
-    echo "wget $DOWNLOAD_ZIP_FILE_URL"
-    wget $DOWNLOAD_ZIP_FILE_URL
+    if [[ $OSTYPE == 'darwin'* ]]; then
+       echo "macOS"
+       echo "curl -LJO $DOWNLOAD_ZIP_FILE_URL"
+       curl -LJO $DOWNLOAD_ZIP_FILE_URL
+    else
+       echo "linux"
+       echo "wget $DOWNLOAD_ZIP_FILE_URL"
+       wget $DOWNLOAD_ZIP_FILE_URL
+    fi
     touch ${ZIP_FILE}.save    
     # overwrite existing file with no prompt
     # unzip -o ${ZIP_FILE}
