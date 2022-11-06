@@ -51,6 +51,11 @@ Please choose one of the following to install:
 * {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.sh]
 * {url-project-repo}/main/install-jar-to-maven-local-repo.sh[install-jar-to-maven-local-repo.sh]
 
+=== Windows
+* {url-project-repo}/main/install-zip-to-downloaded-resources-dir.bat[install-zip-to-downloaded-resources-dir.bat]
+* {url-project-repo}/main/install-jar-to-libs-dir.sh[install-jar-to-libs-dir.bat]
+* {url-project-repo}/main/install-jar-to-maven-local-repo.sh[install-jar-to-maven-local-repo.bat]
+
 == Download Themes And Fonts Package
 
 If you are using AsciidoctorJ, AsciidocFX, Maven, Gradle recommends using the Jar first.
