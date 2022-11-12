@@ -22,7 +22,7 @@ MKDIR %TMP_DIR% 2> NUL
 @ECHO DO NOT KILL XXXX.zip.save >>  %TMP_DIR%\README.txt
 @ECHO XXXX.zip.save IS AVOID DOWNLOAD XXXX.zip AGAIN! >> %TMP_DIR%\README.txt
 
-SET DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.0
+SET DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.1
 
 REM # FONT LANGUAGE CODE
 REM # sc (Simplified Chinese)
