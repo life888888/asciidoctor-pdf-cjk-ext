@@ -10,9 +10,11 @@ ifndef::env-github[]
 endif::[]
 :imagesdir: images
 :font_lang: tc
-:asciidoctor-pdf-cjk-ext-version: 0.1.0
+:asciidoctor-pdf-cjk-ext-version: 0.1.1
 :url-project-repo: https://github.com/life888888/asciidoctor-pdf-cjk-ext
 :download-root: https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v{asciidoctor-pdf-cjk-ext-version}
+:url-rel-file-base: {url-project-repo}/blob/HEAD/
+:url-changelog: {url-rel-file-base}CHANGELOG.adoc
 life888888
 
 The following English content is translated by Google, and the original Chinese content is at README_zh-tw.adoc.
@@ -827,3 +829,11 @@ MIT License - Copyright (C) 2014-present OpenDevise Inc. and the Asciidoctor Pro
 == TODO
 
 * Examples files (Maven) and detailed instruction files will be sorted out.
+
+
+
+== Changelog
+
+Refer to the CHANGELOG for a complete list of changes in older releases.
+
+Refer to the {url-changelog}[CHANGELOG] for a complete list of changes in older releases.
