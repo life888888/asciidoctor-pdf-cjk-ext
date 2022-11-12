@@ -22,7 +22,7 @@ TMP_DIR=~/libs
 echo "THIS FOLDER CREATE BY asciidoctor-pdf-cjk-ext-examples" >> $TMP_DIR/README.txt
 echo "SAVE DOWNLOAD JAR" >> $TMP_DIR/README.txt
 
-DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.0
+DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.1
 
 # FONT LANGUAGE CODE
 # sc (Simplified Chinese)

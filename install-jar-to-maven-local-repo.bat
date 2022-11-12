@@ -18,7 +18,7 @@ MKDIR %TMP_DIR% 2> NUL
 @ECHO  "THIS FOLDER CREATE BY asciidoctor-pdf-cjk-ext-examples" >> %TMP_DIR%\README.txt
 @ECHO  "SAVE DOWNLOAD JAR" >> %TMP_DIR%\README.txt
 
-SET DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.0
+SET DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.1
 
 REM # FONT LANGUAGE CODE
 REM # sc (Simplified Chinese)

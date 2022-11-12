@@ -19,7 +19,7 @@ echo "SAVE DOWNLOAD asciidoctor-pdf-cjk-ext FONTS AND THEMES" >> $TMP_DIR/README
 echo "DO NOT KILL XXXX.zip.save" >> $TMP_DIR/README.txt
 echo "XXXX.zip.save IS AVOID DOWNLOAD XXXX.zip AGAIN!" >> $TMP_DIR/README.txt
 
-DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.0
+DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.1
 
 # FONT LANGUAGE CODE
 # sc (Simplified Chinese)

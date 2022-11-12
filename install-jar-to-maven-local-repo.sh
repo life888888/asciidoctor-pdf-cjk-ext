@@ -9,7 +9,7 @@
 #         ./install-jar-to-maven-local-repo.sh jp
 #
 
-DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.0
+DOWNLOAD_BASE=https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v0.1.1
 
 TMP_DIR=$(mktemp -d -t asciidoctor-pdf-cjk-ext-example-$(date +%Y%m%d%H%M%S)-XXXX)
 
