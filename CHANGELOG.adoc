@@ -1,0 +1,28 @@
+= PROJECT-NAME
+:experimental:
+ifdef::env-github[]
+:toc:
+:toc-placement: preamble
+endif::[]
+ifndef::env-github[]
+:toc:
+:toc-placement: left
+endif::[]
+:imagesdir: images
+:font_lang: tc
+:asciidoctor-pdf-cjk-ext-version: 0.1.1
+:url-project-repo: https://github.com/life888888/asciidoctor-pdf-cjk-ext
+:download-root: https://github.com/life888888/asciidoctor-pdf-cjk-ext/releases/download/v{asciidoctor-pdf-cjk-ext-version}
+:url-rel-file-base: {url-project-repo}/blob/HEAD/
+:url-changelog: {url-rel-file-base}CHANGELOG.adoc
+
+life888888
+
+
+
+== 0.1.1
+
+Improvements::
+
+* Fix CJK Characters and latin characters wrap spaces.
+
