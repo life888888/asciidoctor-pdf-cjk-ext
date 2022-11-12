@@ -10,4 +10,5 @@ font:
       bold_italic: VAR_FILE4_N_VAR
   fallbacks: [M+ 1p Fallback, Noto Emoji, VAR_FONT_NAME_VAR]      
 base_font_family: VAR_FONT_NAME_VAR
+base_align: left
 
