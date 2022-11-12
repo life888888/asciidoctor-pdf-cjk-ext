@@ -830,10 +830,6 @@ MIT License - Copyright (C) 2014-present OpenDevise Inc. and the Asciidoctor Pro
 
 * Examples files (Maven) and detailed instruction files will be sorted out.
 
-
-
 == Changelog
-
-Refer to the CHANGELOG for a complete list of changes in older releases.
 
 Refer to the {url-changelog}[CHANGELOG] for a complete list of changes in older releases.
